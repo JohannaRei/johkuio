@@ -2,15 +2,14 @@ import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import t from '../lang';
 
-const Title = ({ screen }) => (
-  <Text style={styles.text}>{t(`${screen}.title`)}</Text>
+const Text = ({ text, textStyle }) => (
+  <Text style={[styles.text, textStyle]}>{t(text)}</Text>
 );
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 30,
-    fontWeight: 'bold'
+    fontSize: 16
   }
 });
 
-export default Title;
+export default Text;

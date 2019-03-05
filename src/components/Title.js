@@ -1,16 +1,16 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
-import { withNamespaces } from 'react-i18next';
+import { StyleSheet } from 'react-native';
+import Text from './Text';
 
-const Title = ({ screen, t }) => (
-  <Text style={styles.text}>{t(`${screen}.title`)}</Text>
+const Title = ({ screen }) => (
+  <Text text={`${screen}.title`} textStyle={styles.title} />
 );
 
 const styles = StyleSheet.create({
-  text: {
+  title: {
     fontSize: 30,
     fontWeight: 'bold'
   }
 });
 
-export default withNamespaces()(Title);
+export default Title;
