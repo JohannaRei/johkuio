@@ -6,7 +6,7 @@ class ProjectScreen extends React.Component {
   render() {
     return (
       <Screen>
-        <Title tx="Projects" />
+        <Title screen="projectsScreen" />
       </Screen>
     );
   }

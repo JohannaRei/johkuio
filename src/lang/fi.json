@@ -1,0 +1,11 @@
+{
+  "homeScreen": {
+    "title": "Koti"
+  },
+  "aboutScreen": {
+    "title": "Minusta"
+  },
+  "projectsScreen": {
+    "title": "Projektit"
+  }
+}

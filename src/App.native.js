@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-//import RNLocalize from 'react-native-localize';
+import * as RNLocalize from 'react-native-localize';
 import RootStack from './navigation/RootStack';
-//import setI18nConfig from './lang';
+import { setI18nConfig } from './lang';
 
 class App extends Component {
-  /*constructor(props) {
+  constructor(props) {
     super(props);
     setI18nConfig();
   }
@@ -20,7 +20,7 @@ class App extends Component {
   handleLocalizationChange = () => {
     setI18nConfig();
     this.forceUpdate();
-  };*/
+  };
 
   render() {
     return <RootStack />;

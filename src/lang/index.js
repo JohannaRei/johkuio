@@ -1,30 +1,23 @@
-import * as RNLocalize from 'react-native-localize';
-import i18n from 'i18n-js';
-import { I18nManager } from 'react-native';
-import memoize from 'lodash.memoize';
+import i18n from 'i18next';
+import detector from 'i18next-browser-languagedetector';
+import { reactI18nextModule } from 'react-i18next';
+import en from './en.json';
+import fi from './fi.json';
 
-const translationGetters = {
-  en: () => require('./en.json'),
-  fi: () => require('./fi.json')
-};
+i18n
+  .use(detector)
+  .use(reactI18nextModule)
+  .init({
+    resources: {
+      en: {
+        translation: en
+      },
+      fi: {
+        translation: fi
+      }
+    },
+    lng: 'en',
+    interpolation: { escapeValue: false }
+  });
 
-const translate = memoize(
-  (key, config) => i18n.t(key, config),
-  (key, config) => (config ? key + JSON.stringify(config) : key)
-);
-
-const setI18nConfig = () => {
-  const fallback = { languageTag: 'en', isRTL: false };
-
-  const { languageTag, isRTL } =
-    RNLocalize.findBestAvailableLanguage(Object.keys(translationGetters)) ||
-    fallback;
-
-  translate.cache.clear();
-  I18nManager.forceRTL(isRTL);
-
-  i18n.translations = { [languageTag]: translationGetters[languageTag]() };
-  i18n.locale = languageTag;
-};
-
-export default setI8nConfig;
+export default i18n;

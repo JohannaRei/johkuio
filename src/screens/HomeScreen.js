@@ -5,7 +5,7 @@ import { Screen, Title } from '../components';
 const HomeScreen = ({ navigation }) => {
   return (
     <Screen>
-      <Title tx="Home" />
+      <Title screen="homeScreen" />
       <Text>Testing</Text>
     </Screen>
   );

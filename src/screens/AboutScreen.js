@@ -5,7 +5,7 @@ import { Screen, Title } from '../components';
 const AboutScreen = ({ navigation }) => {
   return (
     <Screen>
-      <Title tx="About" />
+      <Title screen="aboutScreen" />
     </Screen>
   );
 };
