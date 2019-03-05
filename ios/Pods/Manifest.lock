@@ -1,0 +1,16 @@
+PODS:
+  - yoga (0.58.6.React)
+
+DEPENDENCIES:
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga/Yoga.podspec`)
+
+EXTERNAL SOURCES:
+  yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga/Yoga.podspec"
+
+SPEC CHECKSUMS:
+  yoga: 32d7ef1081951e9a35a4c72a7be797598b138a48
+
+PODFILE CHECKSUM: 13e6d90689fbcb58e055bf1c01cfec0a5555613b
+
+COCOAPODS: 1.6.0
