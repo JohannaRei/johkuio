@@ -1,3 +1,4 @@
+// @flow
 import HomeScreen from '../screens/HomeScreen';
 import AboutScreen from '../screens/AboutScreen';
 import ProjectScreen from '../screens/ProjectScreen';

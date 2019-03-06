@@ -1,9 +1,15 @@
+// @flow
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
-import t from '../lang';
+import { Text as RNText, StyleSheet } from 'react-native';
+import t from '../lang/index.native';
 
-const Text = ({ text, textStyle }) => (
-  <Text style={[styles.text, textStyle]}>{t(text)}</Text>
+type Props = {
+  text?: string,
+  textStyle: {}
+};
+
+const Text = ({ text, textStyle }: Props) => (
+  <RNText style={[styles.text, textStyle]}>{t(text)}</RNText>
 );
 
 const styles = StyleSheet.create({

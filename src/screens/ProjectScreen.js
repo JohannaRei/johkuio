@@ -1,8 +1,12 @@
-import React from 'react';
+// @flow
+import React, { Component } from 'react';
 import { Text } from 'react-native';
 import { Screen, Title } from '../components';
 
-class ProjectScreen extends React.Component {
+type Props = {};
+type State = {};
+
+class ProjectScreen extends Component<Props, State> {
   render() {
     return (
       <Screen>

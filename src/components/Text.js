@@ -1,8 +1,15 @@
+// @flow
 import React from 'react';
 import { Text as RNText, StyleSheet } from 'react-native';
 import { withNamespaces } from 'react-i18next';
 
-const Text = ({ text, t, textStyle }) => (
+type Props = {
+  text: string,
+  t: string => string,
+  textStyle?: {}
+};
+
+const Text = ({ text, t, textStyle }: Props) => (
   <RNText style={[styles.text, textStyle]}>{t(text)}</RNText>
 );
 

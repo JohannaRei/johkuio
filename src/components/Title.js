@@ -1,8 +1,13 @@
+// @flow
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import Text from './Text';
 
-const Title = ({ screen }) => (
+type Props = {
+  screen: string
+};
+
+const Title = ({ screen }: Props) => (
   <Text text={`${screen}.title`} textStyle={styles.title} />
 );
 

@@ -1,10 +1,13 @@
+// @flow
 import React, { Component } from 'react';
 import * as RNLocalize from 'react-native-localize';
 import RootStack from './navigation/RootStack';
-import { setI18nConfig } from './lang';
+import { setI18nConfig } from './lang/index.native';
 
-class App extends Component {
-  constructor(props) {
+type Props = {};
+
+class App extends Component<Props> {
+  constructor(props: Props) {
     super(props);
     setI18nConfig();
   }
@@ -17,10 +20,10 @@ class App extends Component {
     RNLocalize.removeEventListener('change', this.handleLocalizationChange);
   }
 
-  handleLocalizationChange = () => {
+  handleLocalizationChange() {
     setI18nConfig();
     this.forceUpdate();
-  };
+  }
 
   render() {
     return <RootStack />;

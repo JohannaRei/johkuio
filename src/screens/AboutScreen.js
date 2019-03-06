@@ -1,13 +1,18 @@
-import React from 'react';
-import { Text } from 'react-native';
-import { Screen, Title } from '../components';
+// @flow
+import React, { Component } from 'react';
+import { Screen, Title, Text } from '../components';
 
-const AboutScreen = ({ navigation }) => {
-  return (
-    <Screen>
-      <Title screen="aboutScreen" />
-    </Screen>
-  );
-};
+type Props = {};
+type State = {};
+
+class AboutScreen extends Component<Props, State> {
+  render() {
+    return (
+      <Screen>
+        <Title screen="aboutScreen" />
+      </Screen>
+    );
+  }
+}
 
 export default AboutScreen;

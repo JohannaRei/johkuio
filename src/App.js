@@ -1,13 +1,16 @@
+// @flow
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import WebRoutesGenerator from './navigation/NativeWebRouteWrapper';
 import TopNav from './navigation/TopNav';
 import routeMap from './navigation/routeMap';
 
-class App extends Component {
+type Props = {};
+
+class App extends Component<Props> {
   render() {
     return (
-      <View style={{ height: '100vh', width: '100vw' }}>
+      <View>
         <TopNav />
         {WebRoutesGenerator({ routeMap })}
       </View>
