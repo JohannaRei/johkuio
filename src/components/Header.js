@@ -1,25 +1,34 @@
 // @flow
-import React from 'react';
+import React, { Component } from 'react';
 import { View, StyleSheet, Platform, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
-import { Title } from './';
+import Icon from './Icon';
+import Title from './Title';
 
 type Props = {
   screen: string,
   navigation: any
 };
 
-const Header = ({ screen, navigation }: Props) => (
-  <View style={styles.container}>
-    <TouchableOpacity
-      style={styles.button}
-      onPress={() => navigation.openDrawer()}
-    >
-      <Icon name={`${Platform.OS === 'ios' ? 'ios' : 'md'}-menu`} size={30} />
-    </TouchableOpacity>
-    <Title screen={screen} />
-  </View>
-);
+class Header extends Component<Props> {
+  openDrawer = () => {
+    if (Platform.OS === 'web') {
+      console.log('moi');
+    } else {
+      this.props.navigation.openDrawer();
+    }
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity style={styles.button} onPress={this.openDrawer}>
+          <Icon name="md-menu" />
+        </TouchableOpacity>
+        <Title screen={this.props.screen} />
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
