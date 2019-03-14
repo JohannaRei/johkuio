@@ -1,7 +1,7 @@
 // @flow
-import HomeScreen from '../screens/HomeScreen';
-import AboutScreen from '../screens/AboutScreen';
-import ProjectScreen from '../screens/ProjectScreen';
+import HomeScreen from '../screens/Home/HomeScreen';
+import AboutScreen from '../screens/About/AboutScreen';
+import ProjectScreen from '../screens/Projects/ProjectScreen';
 
 const routeMap = {
   Home: {

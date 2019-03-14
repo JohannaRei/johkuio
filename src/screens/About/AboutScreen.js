@@ -1,7 +1,8 @@
 // @flow
 import React, { Component } from 'react';
-import { Screen, Header, Text } from '../components';
+import { Screen, Header, Text, Content } from '../../components';
 import { Platform } from 'react-native';
+import data from './aboutData.json';
 
 type Props = {
   navigation: any
@@ -13,6 +14,7 @@ class AboutScreen extends Component<Props, State> {
     return (
       <Screen>
         <Header screen="aboutScreen" {...this.props} />
+        <Content data={data} />
       </Screen>
     );
   }

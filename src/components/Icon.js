@@ -6,14 +6,22 @@ type Props = {
   name: string
 };
 
+// needed because of import bugs
 const Icon = ({ name }: Props) => {
   switch (name) {
     case 'md-menu':
-      return <IoMdMenu />;
+      return <IoMdMenu style={styles.icon} />;
     case 'md-close':
-      return <IoMdClose />;
+      return <IoMdClose style={styles.icon} />;
     default:
       return null;
+  }
+};
+
+const styles = {
+  icon: {
+    height: '50px',
+    width: '50px'
   }
 };
 

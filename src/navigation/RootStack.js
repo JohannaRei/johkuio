@@ -1,8 +1,8 @@
 // @flow
 import { createDrawerNavigator, createAppContainer } from 'react-navigation';
-import HomeScreen from '../screens/HomeScreen';
-import AboutScreen from '../screens/AboutScreen';
-import ProjectScreen from '../screens/ProjectScreen';
+import HomeScreen from '../screens/Home/HomeScreen';
+import AboutScreen from '../screens/About/AboutScreen';
+import ProjectScreen from '../screens/Projects/ProjectScreen';
 import Drawer from '../components/Drawer';
 
 const RootStack = createDrawerNavigator(
